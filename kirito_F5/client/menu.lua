@@ -224,6 +224,12 @@ function Kirito_F5() -- Function qui fait l'entièreté du menu
 
                 RageUI.IsVisible(F5WalletMenu, function()
                     RageUI.Separator("~r~↓ ~g~Portefeuille ~r~↓")
+                    local job1 = ESX.PlayerData.job.label
+                    local jobgrade = ESX.PlayerData.job.grade_label
+                    local faction = ESX.PlayerData.faction.label
+                    local factiongrade = ESX.PlayerData.faction.grade_label
+                    RageUI.Separator("~r~>  Emploie : ~b~"..job1.." "..jobgrade)
+                    RageUI.Separator("~r~>  Organisation : ~b~"..faction.." "..factiongrade)
                         for i = 1, #ESX.PlayerData.accounts, 1 do
 						
 						if ESX.PlayerData.accounts[i].name == 'money' then
